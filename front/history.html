@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SmartFridge</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"
+      integrity="sha256-vyehT44mCOPZg7SbqfOZ0HNYXjPKgBCaqxBkW3lh6bg="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./script/history.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_package_v0/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_package_v0/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_package_v0/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_package_v0/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon_package_v0/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <body>
+        <header class="c-header o-row">
+                <div class="o-layout o-layout--justify-space-between o-layout--align-center">
+                <div class="o-layout__item u-1-of-2">
+                <h1><a href="index.html" class="c-logo">SmartFridge</a></h1>
+            </div>
+            <div class="o-layout__item u-1-of-2">
+                <nav class="c-header_nav">
+                <ul class="c-nav_list">
+                    <li><a href="settings.html" class="c-nav_link c-active">Instellingen</a></li>
+                </ul>
+            </div>
+        </div>
+            </header>
+    <div class="o-container">
+      <ul class="c-breadcrumbs">
+        <li class="c-breadcrumb"><a href="index.html">Home</a></li>
+        <li class="c-breadcrumb o-no--text-decoration"><a href="#">/</a></li>
+        <li class="c-breadcrumb"><a href="history.html">Temperatuur</a></li>
+      </ul>
+      <section class="o-layout">
+        <a href="history.html" class="c-linktemp">
+          <div class="c-tempcontainer o-layout--item">
+            <div class="c-temp js-temp u-1-of-2"></div>
+            <div class="u-1-of-2">
+              <div class="c-temp-emoji js-emoji"></div>
+            </div>
+          </div>
+        </a>
+      </section>
+      <canvas id="myChart" width="100%"></canvas>
+    </div>
+  </body>
+</html>
